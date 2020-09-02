@@ -10,19 +10,19 @@ sensuctl check create check-cpu \
 --command 'check-cpu-usage.sh' \
 --interval 60 \
 --subscriptions system \
---runtime-assets sensu-plugins-influxdb
+--runtime-assets sensu-plugins-resource-checks
 
 sensuctl check create check-disk \
 --command 'check-disk-usage.sh' \
 --interval 60 \
 --subscriptions system \
---runtime-assets sensu-plugins-influxdb
+--runtime-assets sensu-plugins-resource-checks
 
 sensuctl check create check-memory \
 --command 'check-memory-usage.sh' \
 --interval 60 \
 --subscriptions system \
---runtime-assets sensu-plugins-influxdb
+--runtime-assets sensu-plugins-resource-checks
 
 ## install influxdb
 cat <<EOF | sudo tee /etc/yum.repos.d/influxdb.repo
